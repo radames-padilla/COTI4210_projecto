@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Fecha: 4/19/26 -->
+<!-- Descripción: Página sobre el Centro Cultural Carmen Solá de Pereira. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre el Centro | Centro Cultural Carmen Solá de Pereira</title>
+    <link rel="stylesheet" href="config.css">
+</head>
+
+<body class="pagina-secundaria">
+    <header>
+        <nav class="menu-izquierdo" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html" class="active">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+        </nav>
+
+        <div class="nombre-header">
+            Centro Cultural Carmen Solá de Pereira
+        </div>
+
+        <div class="menu-derecho">
+            <a href="tel:+17876075112">787 607 5112</a>
+            <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a>
+        </div>
+
+        <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+            Menu
+        </button>
+
+        <div class="menu-movil" id="menu-movil">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-hero">
+            <h1>Sobre<br>el Centro</h1>
+
+            <p>
+                Un espacio cultural en la zona histórica de Ponce dedicado al arte,
+                la educación y las actividades para la comunidad.
+            </p>
+        </section>
+
+        <section class="contenido-historia">
+            <article class="bloque-historia">
+                <span>01</span>
+                <h2>Historia</h2>
+                <p>
+                    Fundado en 1963, el Centro Cultural Carmen Solá de Pereira es uno de los espacios culturales
+                    importantes de Ponce. Desde 1992, su sede se encuentra en una casa colonial de la década de 1870,
+                    ubicada en la zona histórica de la ciudad.
+                </p>
+            </article>
+
+            <article class="bloque-historia">
+                <span>02</span>
+                <h2>Misión</h2>
+                <p>
+                    El centro promueve el arte, la cultura y la educación mediante exhibiciones, actividades culturales,
+                    tertulias y presentaciones abiertas al público.
+                </p>
+            </article>
+
+            <article class="bloque-historia">
+                <span>03</span>
+                <h2>Legado</h2>
+                <p>
+                    Lleva el nombre de Carmen Solá de Pereira, educadora y legisladora ponceña que dedicó parte de su
+                    vida al servicio de la educación y la comunidad.
+                </p>
+            </article>
+
+            <article class="bloque-historia">
+                <span>04</span>
+                <h2>Espacio cultural</h2>
+                <p>
+                    El centro funciona como un lugar de encuentro para personas interesadas en la historia, el arte y
+                    las actividades culturales de la región sur de Puerto Rico.
+                </p>
+            </article>
+
+            <article class="bloque-historia">
+                <span>05</span>
+                <h2>Noches de Galería</h2>
+                <p>
+                    Entre sus actividades se destacan las Noches de Galería, donde artistas, autores y visitantes se
+                    reúnen para compartir trabajos, exhibiciones y experiencias culturales.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-interior">
+        <address>
+            <strong>Centro Cultural Carmen Solá de Pereira</strong><br>
+            Ponce, Puerto Rico<br>
+            <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a><br>
+            <a href="tel:+17876075112">Teléfono: 787-607-5112</a>
+        </address>
+
+        <small><i>Copyright &copy; 2026 Centro Cultural Carmen Solá de Pereira</i></small>
+    </footer>
+
+    <script>
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+            } else {
+                botonMenu.textContent = "Menu";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+            }
+        });
+    </script>
+</body>
+
+</html>

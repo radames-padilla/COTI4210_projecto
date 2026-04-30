@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Fecha: 4/19/26 -->
+<!-- Descripción: Página de visita del Centro Cultural Carmen Solá de Pereira. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visítanos | Centro Cultural Carmen Solá de Pereira</title>
+    <link rel="stylesheet" href="config.css">
+</head>
+
+<body class="pagina-secundaria">
+    <header>
+        <nav class="menu-izquierdo" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html" class="active">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+        </nav>
+
+        <div class="nombre-header">
+            Centro Cultural Carmen Solá de Pereira
+        </div>
+
+        <div class="menu-derecho">
+            <a href="tel:+17876075112">787 607 5112</a>
+            <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a>
+        </div>
+
+        <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+            Menu
+        </button>
+
+        <div class="menu-movil" id="menu-movil">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-hero pagina-visitanos">
+            <p class="etiqueta-pagina">Ubicación</p>
+
+            <h1>Visítanos</h1>
+
+            <p>
+                Estamos ubicados en la zona histórica de Ponce, en la 70 Calle Cristina,
+                cerca de espacios culturales y puntos importantes de la ciudad.
+            </p>
+        </section>
+
+        <section class="contenido-historia">
+            <article class="bloque-historia">
+                <span>01</span>
+                <h2>Dirección</h2>
+                <p>
+                    70 Calle Cristina, Zona Histórica, Ponce, Puerto Rico 00730.
+                    Esta dirección puede utilizarse para buscar el centro directamente
+                    en Google Maps.
+                </p>
+            </article>
+
+            <article class="bloque-historia bloque-mapa">
+                <span>02</span>
+                <h2>Mapa</h2>
+
+                <div class="contenedor-mapa">
+                    <iframe class="mapa-centro"
+                        src="https://www.google.com/maps?q=70%20Calle%20Cristina%2C%20Ponce%2C%20Puerto%20Rico%2000730&amp;output=embed"
+                        title="Mapa de ubicación del Centro Cultural Carmen Solá de Pereira" allowfullscreen
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <a class="enlace-mapa"
+                        href="https://www.google.com/maps/search/?api=1&amp;query=70+Calle+Cristina%2C+Ponce%2C+Puerto+Rico+00730"
+                        target="_blank" rel="noopener noreferrer">
+                        Ver ubicación en Google Maps
+                    </a>
+                </div>
+            </article>
+
+            <article class="bloque-historia">
+                <span>03</span>
+                <h2>Contacto</h2>
+                <p>
+                    Para información adicional, puedes escribir a
+                    <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a>
+                    o llamar al
+                    <a href="tel:+17876075112">(787) 607-5112</a>.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-interior">
+        <address>
+            <strong>Centro Cultural Carmen Solá de Pereira</strong><br>
+            70 Calle Cristina, Ponce, Puerto Rico 00730<br>
+            <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a><br>
+            <a href="tel:+17876075112">Teléfono: 787-607-5112</a>
+        </address>
+
+        <small><i>Copyright &copy; 2026 Centro Cultural Carmen Solá de Pereira</i></small>
+    </footer>
+
+    <script>
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+            } else {
+                botonMenu.textContent = "Menu";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+            }
+        });
+    </script>
+</body>
+
+</html>

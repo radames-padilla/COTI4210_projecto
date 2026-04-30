@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Fecha: 4/19/26 -->
+<!-- Descripción: Avance Proj. Final. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centro Cultural Carmen Solá de Pereira</title>
+    <link rel="stylesheet" href="config.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu-izquierdo" aria-label="Navegación principal">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="historia.html">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+        </nav>
+
+        <div class="menu-derecho">
+            <a href="tel:+17876075112">787-607-5112</a>
+            <a href="mailto:centroculturalponce@gmail.com">centroculturalponce@gmail.com</a><br>
+        </div>
+        <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+            Menú
+        </button>
+
+        <div class="menu-movil" id="menu-movil">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Sobre el Centro</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="visitanos.html">Visítanos</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="titulo-izquierdo">
+                <h1>Centro Cultural<br>Carmen Solá<br>de Pereira</h1>
+            </div>
+
+            <div class="titulo-derecho">
+                <h2>Somos<br>historia</h2>
+            </div>
+
+            <div class="info-izquierda">
+                <h3>Tu espacio para<br>conocer Ponce</h3>
+
+                <div class="linea-corta"></div>
+
+                <p>
+                    Un centro cultural dedicado al arte, historia,
+                    exhibiciones y actividades.
+                </p>
+            </div>
+
+            <a href="visitanos.html" class="boton-hero">
+                Visítanos
+            </a>
+
+            <p class="texto-final">70 Calle Cristina, Ponce, PR</p>
+        </section>
+    </main>
+
+    <script>
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+            } else {
+                botonMenu.textContent = "Menu";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+            }
+        });
+    </script>
+</body>
+
+</html>
