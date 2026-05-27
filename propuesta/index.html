@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Número de estudiante: 801105420 -->
+<!-- Fecha: 5/26/2026 -->
+<!-- Descripción: Proj. Final. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Centro Cultural Carmen Solá de Pereira</title>
+    <style>
+        html.preparando-interior,
+        html.preparando-interior body {
+            background: #000 !important;
+            overflow: hidden !important;
+        }
+
+        html.preparando-interior body {
+            visibility: hidden !important;
+        }
+
+        html.preparando-interior::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 2147483647;
+            background: #000;
+        }
+    </style>
+    <script>
+        const parametrosIniciales = new URLSearchParams(window.location.search);
+
+        if (parametrosIniciales.get("home") === "1") {
+            sessionStorage.removeItem("volverAlInterior");
+            history.scrollRestoration = "manual";
+            window.scrollTo(0, 0);
+        } else if (
+            parametrosIniciales.get("inside") === "1" ||
+            sessionStorage.getItem("volverAlInterior") === "1"
+        ) {
+            document.documentElement.classList.add("preparando-interior");
+        }
+    </script>
+    <link href="assets/favicon.ico" rel="icon" sizes="any">
+    <link href="config.css" rel="stylesheet">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header>
+        <nav aria-label="Navegación principal" class="menu-izquierdo">
+            <ul>
+                <li><a href="index.html?home=1" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="historia.html">Sobre el Centro</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="visitanos.html">Visítanos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html?home=1" class="nombre-header">
+            Centro Cultural Carmen Solá de Pereira
+        </a>
+
+        <div class="menu-derecho menu-marca">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=70+Calle+Cristina+Ponce+Puerto+Rico+00730"
+                rel="noopener noreferrer" target="_blank" title="Abrir ubicación del centro en Google Maps">
+                70 Calle Cristina, Ponce, PR
+            </a>
+        </div>
+
+        <button aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú" class="boton-menu"
+            id="boton-menu" type="button">
+            Menú
+        </button>
+
+        <div aria-label="Navegación móvil" class="menu-movil" id="menu-movil" role="navigation">
+            <ul>
+                <li><a href="index.html?home=1" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="historia.html">Sobre el Centro</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="visitanos.html">Visítanos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="contenido-principal" tabindex="-1">
+        <section class="scroll-video hero-video" id="scroll-video">
+            <div class="video-fixed" id="video-fixed">
+                <video aria-hidden="true" id="video-puerta" muted playsinline webkit-playsinline preload="auto"
+                    tabindex="-1" title="Video de entrada al centro">
+                    <source src="assets/entrada-centro.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+            </div>
+
+            <div class="overlay-home" id="overlay-home">
+                <div aria-hidden="true" class="marco-home">
+                    <span class="marco-esquina marco-esquina-tl"></span>
+                    <span class="marco-esquina marco-esquina-tr"></span>
+                    <span class="marco-esquina marco-esquina-bl"></span>
+                    <span class="marco-esquina marco-esquina-br"></span>
+                </div>
+
+                <div class="titulo-izquierdo">
+                    <h1>Centro Cultural<br>Carmen Solá<br>de Pereira</h1>
+                </div>
+
+                <div class="titulo-derecho">
+                    <h2>Arte<br>Historia</h2>
+                </div>
+
+                <div class="info-izquierda">
+                    <h3>Explora la historia<br>de Ponce</h3>
+                    <div class="linea-corta"></div>
+                    <p>
+                        Un centro cultural dedicado al arte, historia,
+                        exhibiciones y actividades.
+                    </p>
+                </div>
+
+                <button class="boton-hero" id="boton-entrar" type="button">
+                    Entrar al Centro
+                </button>
+
+                <div class="indicador-scroll">
+                    <span>Scroll</span>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="indicador-scroll-mitad" id="indicador-scroll-mitad">
+                <span>Scroll</span>
+                <div></div>
+            </div>
+
+            <div class="opciones-finales" id="opciones-finales">
+                <a class="hotspot hotspot-sobre transicion-link" data-room="left" href="historia.html?from=inside">
+                    Sobre el Centro
+                </a>
+
+                <a class="hotspot hotspot-actividades transicion-link" data-room="center"
+                    href="actividades.html?from=inside">
+                    Actividades
+                </a>
+
+                <a class="hotspot hotspot-galeria transicion-link" data-room="right" href="galeria.html?from=inside">
+                    Galería
+                </a>
+
+                <a class="hotspot hotspot-mapa transicion-link" data-room="map" href="visitanos.html?from=inside">
+                    Mapa
+                </a>
+
+                <div class="salir-casa-grupo">
+                    <div aria-hidden="true" class="indicador-salir">
+                        <span></span>
+                        <div></div>
+                    </div>
+
+                    <button class="hotspot hotspot-salir" id="boton-salir-casa" type="button">
+                        Salir del Centro
+                    </button>
+                </div>
+
+                <a class="hotspot hotspot-contacto transicion-link" data-room="contact"
+                    href="contacto.html?from=inside">
+                    Contacto
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div class="video-transicion" id="video-transicion">
+        <video aria-hidden="true" id="video-transicion-player" muted playsinline webkit-playsinline preload="auto"
+            tabindex="-1" title="Video decorativo">
+        </video>
+    </div>
+
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        const parametrosPagina = new URLSearchParams(window.location.search);
+        const forzarHome = parametrosPagina.get("home") === "1";
+
+        if (forzarHome) {
+            sessionStorage.removeItem("volverAlInterior");
+            document.documentElement.classList.remove("preparando-interior");
+            document.body.classList.remove("header-interior");
+            window.scrollTo(0, 0);
+        }
+
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+                botonMenu.setAttribute("aria-expanded", "true");
+            } else {
+                botonMenu.textContent = "Menú";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+                botonMenu.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const botonEntrar = document.getElementById("boton-entrar");
+        const botonSalirCasa = document.getElementById("boton-salir-casa");
+        const scrollVideo = document.getElementById("scroll-video");
+        const videoPuerta = document.getElementById("video-puerta");
+        const videoFixed = document.getElementById("video-fixed");
+        const overlayHome = document.getElementById("overlay-home");
+        const opcionesFinales = document.getElementById("opciones-finales");
+        const indicadorScrollMitad = document.getElementById("indicador-scroll-mitad");
+
+        const linksTransicion = document.querySelectorAll(".transicion-link");
+        const videoTransicion = document.getElementById("video-transicion");
+        const videoTransicionPlayer = document.getElementById("video-transicion-player");
+
+        let ultimoScroll = window.scrollY;
+        let rafActivo = false;
+
+        videoPuerta.muted = true;
+        videoPuerta.defaultMuted = true;
+        videoPuerta.playsInline = true;
+        videoPuerta.setAttribute("muted", "");
+        videoPuerta.setAttribute("playsinline", "");
+        videoPuerta.setAttribute("webkit-playsinline", "");
+        videoPuerta.setAttribute("preload", "auto");
+        videoPuerta.load();
+
+        function obtenerPuntoOpciones() {
+            const inicio = scrollVideo.offsetTop;
+            const distancia = scrollVideo.offsetHeight - window.innerHeight;
+            return inicio + distancia * 0.97;
+        }
+
+        function debeEntrarAlInterior() {
+            const parametros = new URLSearchParams(window.location.search);
+
+            return (
+                parametros.get("inside") === "1" ||
+                sessionStorage.getItem("volverAlInterior") === "1"
+            );
+        }
+
+        function ponerTiempoVideoPuerta(tiempo) {
+            if (!videoPuerta || !videoPuerta.duration) {
+                return;
+            }
+
+            try {
+                videoPuerta.currentTime = tiempo;
+            } catch (error) {
+                videoPuerta.load();
+            }
+        }
+
+        function mostrarInicioReal() {
+            sessionStorage.removeItem("volverAlInterior");
+            document.documentElement.classList.remove("preparando-interior");
+            document.body.classList.remove("header-interior");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "auto"
+            });
+
+            ultimoScroll = 0;
+            ponerTiempoVideoPuerta(0.05);
+
+            if (overlayHome) {
+                overlayHome.classList.remove("oculto");
+            }
+
+            if (videoFixed) {
+                videoFixed.classList.remove("oculto");
+            }
+
+            if (opcionesFinales) {
+                opcionesFinales.classList.remove("visible");
+            }
+
+            if (indicadorScrollMitad) {
+                indicadorScrollMitad.classList.remove("visible");
+            }
+
+            pedirActualizacion();
+        }
+
+        function mostrarInteriorDelCentro() {
+            const puntoOpciones = obtenerPuntoOpciones();
+            const scrollOriginal = document.documentElement.style.scrollBehavior;
+
+            document.documentElement.style.scrollBehavior = "auto";
+
+            window.scrollTo(0, puntoOpciones);
+
+            ultimoScroll = puntoOpciones;
+            ponerTiempoVideoPuerta(videoPuerta.duration * 0.97);
+
+            if (overlayHome) {
+                overlayHome.classList.add("oculto");
+            }
+
+            if (videoFixed) {
+                videoFixed.classList.remove("oculto");
+            }
+
+            if (opcionesFinales) {
+                opcionesFinales.classList.add("visible");
+            }
+
+            document.body.classList.add("header-interior");
+
+            if (indicadorScrollMitad) {
+                indicadorScrollMitad.classList.remove("visible");
+            }
+
+            pedirActualizacion();
+
+            setTimeout(function () {
+                document.documentElement.style.scrollBehavior = scrollOriginal;
+            }, 80);
+        }
+
+        function finalizarPreparacionInterior() {
+            if (window.__preparacionInteriorFinalizada) {
+                return;
+            }
+
+            window.__preparacionInteriorFinalizada = true;
+
+            setTimeout(function () {
+                mostrarInteriorDelCentro();
+
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        sessionStorage.removeItem("volverAlInterior");
+                        document.documentElement.classList.remove("preparando-interior");
+                    });
+                });
+            }, 520);
+        }
+
+        function revisarEntradaAlInterior() {
+            if (forzarHome) {
+                mostrarInicioReal();
+                return;
+            }
+
+            if (!debeEntrarAlInterior()) {
+                document.documentElement.classList.remove("preparando-interior");
+                return;
+            }
+
+            mostrarInteriorDelCentro();
+
+            requestAnimationFrame(function () {
+                mostrarInteriorDelCentro();
+
+                setTimeout(function () {
+                    mostrarInteriorDelCentro();
+                }, 80);
+
+                setTimeout(function () {
+                    mostrarInteriorDelCentro();
+                    finalizarPreparacionInterior();
+                }, 180);
+
+                setTimeout(function () {
+                    mostrarInteriorDelCentro();
+                    finalizarPreparacionInterior();
+                }, 420);
+            });
+        }
+
+        botonEntrar.addEventListener("click", function () {
+            const scrollOriginal = document.documentElement.style.scrollBehavior;
+            document.documentElement.style.scrollBehavior = "auto";
+
+            const inicio = window.scrollY;
+            const destino = obtenerPuntoOpciones();
+            const distancia = destino - inicio;
+            const duracion = 2800;
+            const tiempoInicio = performance.now();
+
+            function suavizar(progreso) {
+                return progreso < 0.5
+                    ? 2 * progreso * progreso
+                    : 1 - Math.pow(-2 * progreso + 2, 2) / 2;
+            }
+
+            function animar(tiempoActual) {
+                const progreso = Math.min((tiempoActual - tiempoInicio) / duracion, 1);
+                const posicion = inicio + distancia * suavizar(progreso);
+
+                window.scrollTo(0, posicion);
+                ultimoScroll = window.scrollY;
+                pedirActualizacion();
+
+                if (progreso < 1) {
+                    requestAnimationFrame(animar);
+                } else {
+                    window.scrollTo(0, destino);
+                    ultimoScroll = destino;
+                    pedirActualizacion();
+
+                    setTimeout(function () {
+                        document.documentElement.style.scrollBehavior = scrollOriginal;
+                    }, 80);
+                }
+            }
+
+            requestAnimationFrame(animar);
+        });
+
+        botonSalirCasa.addEventListener("click", function () {
+            document.body.classList.remove("header-interior");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            setTimeout(function () {
+                ultimoScroll = window.scrollY;
+                pedirActualizacion();
+            }, 700);
+        });
+
+        function actualizarEstadoVisual(progreso, dentroDeSeccion) {
+            if (dentroDeSeccion) {
+                videoFixed.classList.remove("oculto");
+            } else {
+                videoFixed.classList.add("oculto");
+            }
+
+            if (dentroDeSeccion && progreso <= 0.15) {
+                overlayHome.classList.remove("oculto");
+            } else {
+                overlayHome.classList.add("oculto");
+            }
+
+            if (indicadorScrollMitad) {
+                if (dentroDeSeccion && progreso >= 0.45 && progreso < 0.88) {
+                    indicadorScrollMitad.classList.add("visible");
+                } else {
+                    indicadorScrollMitad.classList.remove("visible");
+                }
+            }
+
+            if (dentroDeSeccion && progreso >= 0.70) {
+                document.body.classList.add("header-interior");
+            } else {
+                document.body.classList.remove("header-interior");
+            }
+
+            if (dentroDeSeccion && progreso >= 0.90) {
+                opcionesFinales.classList.add("visible");
+            } else {
+                opcionesFinales.classList.remove("visible");
+            }
+        }
+
+        function actualizarVideo() {
+            rafActivo = false;
+
+            const sectionTop = scrollVideo.offsetTop;
+            const sectionBottom = sectionTop + scrollVideo.offsetHeight;
+            const distancia = scrollVideo.offsetHeight - window.innerHeight;
+
+            let progreso = (ultimoScroll - sectionTop) / distancia;
+            progreso = Math.min(Math.max(progreso, 0), 1);
+
+            const dentroDeSeccion =
+                ultimoScroll >= sectionTop &&
+                ultimoScroll < sectionBottom - window.innerHeight * 0.01;
+
+            if (videoPuerta.duration) {
+                const nuevoTiempo = videoPuerta.duration * progreso;
+
+                if (Math.abs(videoPuerta.currentTime - nuevoTiempo) > 0.03) {
+                    ponerTiempoVideoPuerta(nuevoTiempo);
+                }
+            }
+
+            actualizarEstadoVisual(progreso, dentroDeSeccion);
+        }
+
+        function pedirActualizacion() {
+            ultimoScroll = window.scrollY;
+
+            if (!rafActivo) {
+                rafActivo = true;
+                requestAnimationFrame(actualizarVideo);
+            }
+        }
+
+        videoPuerta.addEventListener("loadedmetadata", function () {
+            videoPuerta.pause();
+
+            if (forzarHome) {
+                mostrarInicioReal();
+            } else {
+                pedirActualizacion();
+                revisarEntradaAlInterior();
+            }
+
+            window.addEventListener("scroll", pedirActualizacion, { passive: true });
+
+            window.addEventListener("resize", function () {
+                pedirActualizacion();
+
+                if (debeEntrarAlInterior()) {
+                    revisarEntradaAlInterior();
+                }
+            });
+        });
+
+        videoPuerta.addEventListener("loadeddata", function () {
+            pedirActualizacion();
+        });
+
+        videoPuerta.addEventListener("error", function () {
+            console.log("No se pudo cargar el video inicial:", videoPuerta.currentSrc);
+        });
+
+        window.addEventListener("load", function () {
+            if (forzarHome) {
+                mostrarInicioReal();
+                return;
+            }
+
+            pedirActualizacion();
+            revisarEntradaAlInterior();
+        });
+
+        const videosPorCuarto = {
+            left: "assets/entrar-sobre.mp4",
+            center: "assets/entrar-actividades.mp4",
+            right: "assets/entrar-galeria.mp4",
+            map: "assets/entrar-mapa.mp4",
+            contact: "assets/entrar-contacto.mp4"
+        };
+
+        linksTransicion.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const destino = link.getAttribute("href");
+                const room = link.dataset.room;
+                const videoSrc = videosPorCuarto[room];
+
+                if (!videoSrc) {
+                    window.location.href = destino;
+                    return;
+                }
+
+                videoTransicionPlayer.pause();
+                videoTransicionPlayer.onended = null;
+                videoTransicionPlayer.removeAttribute("src");
+                videoTransicionPlayer.load();
+
+                videoTransicionPlayer.src = videoSrc;
+                videoTransicion.classList.add("activa");
+                document.body.classList.add("transicion-activa");
+
+                videoTransicionPlayer.currentTime = 0;
+                videoTransicionPlayer.playbackRate = 1.6;
+
+                const playPromise = videoTransicionPlayer.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(function () {
+                        window.location.href = destino;
+                    });
+                }
+
+                videoTransicionPlayer.onended = function () {
+                    videoTransicionPlayer.onended = null;
+                    window.location.href = destino;
+                };
+            });
+        });
+
+        window.addEventListener("pageshow", function () {
+            document.body.classList.remove("transicion-activa");
+
+            if (videoTransicion) {
+                videoTransicion.classList.remove("activa");
+            }
+
+            if (videoTransicionPlayer) {
+                videoTransicionPlayer.pause();
+                videoTransicionPlayer.onended = null;
+                videoTransicionPlayer.removeAttribute("src");
+                videoTransicionPlayer.load();
+            }
+
+            if (forzarHome) {
+                mostrarInicioReal();
+                return;
+            }
+
+            if (debeEntrarAlInterior()) {
+                revisarEntradaAlInterior();
+                return;
+            }
+
+            setTimeout(function () {
+                ultimoScroll = window.scrollY;
+                pedirActualizacion();
+
+                const sectionTop = scrollVideo.offsetTop;
+                const distancia = scrollVideo.offsetHeight - window.innerHeight;
+                let progreso = (window.scrollY - sectionTop) / distancia;
+                progreso = Math.min(Math.max(progreso, 0), 1);
+
+                if (progreso >= 0.70) {
+                    document.body.classList.add("header-interior");
+                } else {
+                    document.body.classList.remove("header-interior");
+                }
+
+                if (progreso >= 0.90) {
+                    if (overlayHome) {
+                        overlayHome.classList.add("oculto");
+                    }
+
+                    if (videoFixed) {
+                        videoFixed.classList.remove("oculto");
+                    }
+
+                    if (opcionesFinales) {
+                        opcionesFinales.classList.add("visible");
+                    }
+
+                    if (indicadorScrollMitad) {
+                        indicadorScrollMitad.classList.remove("visible");
+                    }
+                }
+            }, 80);
+        });
+    </script>
+</body>
+
+</html>

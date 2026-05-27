@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Número de estudiante: 801105420 -->
+<!-- Fecha: 5/26/2026 -->
+<!-- Descripción: Proj. Final. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>
+        Contacto | Centro Cultural Carmen Solá de Pereira
+    </title>
+    <link href="assets/favicon.ico" rel="icon" sizes="any">
+    <link href="config.css" rel="stylesheet">
+</head>
+
+<body class="pagina-secundaria pagina-entra pagina-contacto">
+    <a class="skip-link" href="#contenido-principal">
+        Saltar al
+        contenido principal
+    </a>
+    <header>
+        <nav aria-label="Navegación principal" class="menu-izquierdo">
+            <ul>
+                <li>
+                    <a href="index.html?home=1">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="historia.html">
+                        Sobre el Centro
+                    </a>
+                </li>
+                <li>
+                    <a href="actividades.html">
+                        Actividades
+                    </a>
+                </li>
+                <li>
+                    <a href="visitanos.html">
+                        Visítanos
+                    </a>
+                </li>
+                <li>
+                    <a href="galeria.html">
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a href="contacto.html" class="active" aria-current="page">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a class="nombre-header" href="index.html?home=1">
+            Centro Cultural Carmen Solá de Pereira
+        </a>
+        <div class="menu-derecho menu-marca">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=70+Calle+Cristina+Ponce+Puerto+Rico+00730"
+                rel="noopener noreferrer" target="_blank" title="Abrir ubicación del centro en Google Maps">
+                70 Calle Cristina, Ponce, PR
+            </a>
+        </div>
+        <button class="boton-menu" id="boton-menu" type="button" aria-controls="menu-movil" aria-expanded="false"
+            aria-label="Abrir menú">
+            Menú
+        </button>
+        <div aria-label="Menú móvil" class="menu-movil" id="menu-movil" role="navigation">
+            <ul>
+                <li>
+                    <a href="index.html?home=1">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="historia.html">
+                        Sobre el Centro
+                    </a>
+                </li>
+                <li>
+                    <a href="actividades.html">
+                        Actividades
+                    </a>
+                </li>
+                <li>
+                    <a href="visitanos.html">
+                        Visítanos
+                    </a>
+                </li>
+                <li>
+                    <a href="galeria.html">
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a href="contacto.html" class="active" aria-current="page">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main id="contenido-principal" tabindex="-1">
+        <section class="pagina-hero hero-contacto">
+            <div class="contenido-hero-interior">
+                <p class="etiqueta-pagina">
+                    Contacto
+                </p>
+                <h1>
+                    Comunícate
+                </h1>
+                <p>
+                    Envía consultas, propuestas culturales, solicitudes de información
+                    o coordinación de actividades.
+                </p>
+            </div>
+        </section>
+        <section aria-label="Contacto" class="contenido-contacto contacto-redisenado" id="contacto" tabindex="-1">
+            <div class="contacto-panel">
+                <div class="contacto-intro">
+                    <h2>
+                        Escríbenos
+                    </h2>
+                    <p>
+                        Para preguntas sobre actividades, talleres, exhibiciones, colaboraciones
+                        o visitas coordinadas, completa el formulario.
+                    </p>
+                </div>
+                <div class="contacto-canales">
+                    <a href="tel:+17876075112">
+                        <small>
+                            Teléfono
+                        </small>
+                        <strong>
+                            787-607-5112
+                        </strong>
+                    </a>
+                    <a href="mailto:centroculturalponce@gmail.com">
+                        <small>
+                            Email
+                        </small>
+                        <strong>
+                            centroculturalponce@gmail.com
+                        </strong>
+                    </a>
+                </div>
+                <div class="contacto-usos">
+                    <h3>
+                        Temas que puedes consultar
+                    </h3>
+                    <ul>
+                        <li>
+                            Calendario de actividades y talleres
+                        </li>
+                        <li>
+                            Propuestas artísticas o educativas
+                        </li>
+                        <li>
+                            Visitas de grupos e instituciones
+                        </li>
+                        <li>
+                            Información sobre exhibiciones
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="formulario-contacto formulario-contacto-redisenado" id="formulario-contacto"
+                aria-label="Formulario de contacto">
+                <div class="formulario-head">
+                    <span>
+                        Formulario
+                    </span>
+                    <h3>
+                        Enviar mensaje
+                    </h3>
+                </div>
+                <div class="campo-contacto">
+                    <label for="nombre">
+                        Nombre
+                    </label>
+                    <input autocomplete="name" id="nombre" name="nombre" required="" type="text">
+                </div>
+                <div class="campo-contacto">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input autocomplete="email" id="email" name="email" required="" type="email">
+                </div>
+                <div class="campo-contacto">
+                    <label for="asunto">
+                        Asunto
+                    </label>
+                    <input id="asunto" name="asunto" required="" type="text">
+                </div>
+                <div class="campo-contacto">
+                    <label for="mensaje">
+                        Mensaje
+                    </label>
+                    <textarea id="mensaje" name="mensaje" required="" rows="7"></textarea>
+                </div>
+                <button class="boton-contacto" type="submit" title="Preparar mensaje de correo electrónico">
+                    Preparar email
+                </button>
+                <p class="nota-contacto">
+                    El formulario abrirá tu aplicación de correo con el mensaje preparado para enviar.
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer class="footer-interior">
+        <nav aria-label="Navegación secundaria" class="footer-nav">
+            <ul>
+                <li>
+                    <a href="index.html?home=1">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="historia.html">
+                        Sobre el Centro
+                    </a>
+                </li>
+                <li>
+                    <a href="actividades.html">
+                        Actividades
+                    </a>
+                </li>
+                <li>
+                    <a href="visitanos.html">
+                        Visítanos
+                    </a>
+                </li>
+                <li>
+                    <a href="galeria.html">
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a href="contacto.html" class="active" aria-current="page">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <address>
+            <strong>
+                Centro Cultural Carmen Solá de Pereira
+            </strong>
+            <br>
+            70 Calle Cristina, Ponce, Puerto Rico 00730
+            <br>
+            <a href="mailto:centroculturalponce@gmail.com">
+                centroculturalponce@gmail.com
+            </a>
+            <br>
+            <a href="tel:+17876075112">
+                Teléfono: 787-607-5112
+            </a>
+        </address>
+        <small>
+            <i>
+                Copyright © 2026 Centro Cultural Carmen Solá de Pereira
+            </i>
+        </small>
+    </footer>
+    <script>
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            document.body.classList.toggle(
+                "menu-movil-abierto",
+                menuMovil.classList.contains("abierto")
+            );
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+                botonMenu.setAttribute("aria-expanded", "true");
+            } else {
+                botonMenu.textContent = "Menú";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+                botonMenu.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const formularioContacto = document.getElementById("formulario-contacto");
+
+        formularioContacto.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const asunto = document.getElementById("asunto").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+
+            const cuerpo = [
+                "Nombre: " + nombre,
+                "Email: " + email,
+                "",
+                mensaje
+            ].join("\n");
+
+            const mailto = "mailto:centroculturalponce@gmail.com"
+                + "?subject=" + encodeURIComponent(asunto)
+                + "&body=" + encodeURIComponent(cuerpo);
+
+            window.location.href = mailto;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!-- Nombre: Radamés Padilla -->
+<!-- Número de estudiante: 801105420 -->
+<!-- Fecha: 5/26/2026 -->
+<!-- Descripción: Proj. Final. -->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Galería | Centro Cultural Carmen Solá de Pereira</title>
+    <link href="assets/favicon.ico" rel="icon" sizes="any">
+    <link href="config.css" rel="stylesheet">
+</head>
+
+<body class="pagina-secundaria pagina-entra pagina-galeria"><a class="skip-link" href="#contenido-principal">Saltar al
+        contenido principal</a>
+    <header>
+        <nav aria-label="Navegación principal" class="menu-izquierdo">
+            <ul>
+                <li><a href="index.html?home=1">Inicio</a></li>
+                <li><a href="historia.html">Sobre el Centro</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="visitanos.html">Visítanos</a></li>
+                <li><a href="galeria.html" class="active" aria-current="page">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a class="nombre-header" href="index.html?home=1">
+            Centro Cultural Carmen Solá de Pereira
+        </a>
+        <div class="menu-derecho menu-marca">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=70+Calle+Cristina+Ponce+Puerto+Rico+00730"
+                rel="noopener noreferrer" target="_blank" title="Abrir ubicación del centro en Google Maps">
+                70 Calle Cristina, Ponce, PR
+            </a>
+        </div>
+        <button aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú" class="boton-menu"
+            id="boton-menu">
+            Menú
+        </button>
+        <div aria-label="Navegación móvil" class="menu-movil" id="menu-movil" role="navigation">
+            <ul>
+                <li><a href="index.html?home=1">Inicio</a></li>
+                <li><a href="historia.html">Sobre el Centro</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="visitanos.html">Visítanos</a></li>
+                <li><a href="galeria.html" class="active" aria-current="page">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="contenido-principal" tabindex="-1">
+        <section class="pagina-hero hero-galeria">
+            <div class="contenido-hero-interior">
+                <p class="etiqueta-pagina">Galería</p>
+                <h1>Galería</h1>
+                <p>
+                    Imágenes del espacio, exhibiciones, eventos y actividades culturales
+                    del Centro Cultural Carmen Solá de Pereira.
+                </p>
+            </div>
+        </section>
+        <section aria-label="Galería visual" class="galeria-stage">
+            <div class="galeria-head">
+                <p class="galeria-kicker"><br></p>
+                <h2>Galería</h2>
+                <p>
+                    Selecciona una sección para ver las fotos.
+                </p>
+            </div>
+            <div class="rail-wrap">
+                <div aria-label="Secciones de galería" class="rail" id="rail" role="group">
+                    <button class="painting activo" data-categoria="espacio" type="button">
+                        <span aria-hidden="true" class="img"
+                            style="background-image:url('assets/galeria/espacio/espacio-09.jpg')"></span>
+                        <span aria-hidden="true" class="light"></span>
+                        <span class="tag">Espacios</span>
+                        <span class="meta">
+                            <strong>Espacios del centro</strong>
+                            <span>Entrada, espacios y áreas del centro.</span>
+                        </span>
+                    </button>
+                    <button class="painting" data-categoria="eventos" type="button">
+                        <span aria-hidden="true" class="img"
+                            style="background-image:url('assets/galeria/eventos/evento-01.jpg')"></span>
+                        <span aria-hidden="true" class="light"></span>
+                        <span class="tag">Eventos</span>
+                        <span class="meta">
+                            <strong>Eventos culturales</strong>
+                            <span>Presentaciones, talleres y actividades.</span>
+                        </span>
+                    </button>
+                    <button class="painting" data-categoria="exhibiciones" type="button">
+                        <span aria-hidden="true" class="img"
+                            style="background-image:url('assets/galeria/exhibiciones/exhibicion-01.jpg')"></span>
+                        <span aria-hidden="true" class="light"></span>
+                        <span class="tag">Exhibiciones</span>
+                        <span class="meta">
+                            <strong>Exhibiciones</strong>
+                            <span>Pinturas, esculturas y montajes de artistas locales.</span>
+                        </span>
+                    </button>
+                    <button class="painting" data-categoria="anuncios" type="button">
+                        <span aria-hidden="true" class="img"
+                            style="background-image:url('assets/galeria/anuncios/anuncio-01.jpg')"></span>
+                        <span aria-hidden="true" class="light"></span>
+                        <span class="tag">Anuncios</span>
+                        <span class="meta">
+                            <strong>Anuncios</strong>
+                            <span>Actividades, convocatorias y programación.</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <section aria-label="Fotos de la sección seleccionada" class="galeria-fotos">
+                <div class="galeria-fotos-head">
+                    <div>
+                        <p class="galeria-kicker">Fotos</p>
+                        <h3 id="titulo-seccion">Espacio</h3>
+                    </div>
+                    <p id="descripcion-seccion">
+                        Salas, rincones y áreas de encuentro del centro.
+                    </p>
+                </div>
+                <div class="grid-fotos-seccion" id="grid-fotos-seccion"></div>
+            </section>
+        </section>
+    </main>
+    <button class="boton-volver-recorrido" id="boton-volver-recorrido" type="button">
+        Volver
+    </button>
+    <footer class="footer-interior">
+        <nav aria-label="Navegación secundaria" class="footer-nav">
+            <ul>
+                <li><a href="index.html?home=1">Inicio</a></li>
+                <li><a href="historia.html">Sobre el Centro</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="visitanos.html">Visítanos</a></li>
+                <li><a href="galeria.html" class="active" aria-current="page">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <address>
+            <strong>Centro Cultural Carmen Solá de Pereira</strong><br>
+            Ponce, Puerto Rico<br>
+            <a href="mailto:centroculturalponce@gmail.com"
+                title="Enviar correo al Centro Cultural Carmen Solá de Pereira">centroculturalponce@gmail.com</a><br>
+            <a href="tel:+17876075112" title="Llamar al Centro Cultural Carmen Solá de Pereira">Teléfono:
+                787-607-5112</a>
+        </address>
+        <small><i>Copyright © 2026 Centro Cultural Carmen Solá de Pereira</i></small>
+    </footer>
+    <div class="video-transicion-regreso" id="video-transicion-regreso">
+        <video aria-hidden="true" id="video-regreso-player" muted="" playsinline="" preload="auto" tabindex="-1"
+            title="Video decorativo de transición">
+            <source src="assets/salir-galeria.mp4" type="video/mp4">
+            <track default kind="captions" label="Español" src="assets/captions/video-decorativo.vtt" srclang="es">
+            Tu navegador no soporta video HTML5.
+        </video>
+    </div>
+    <div aria-hidden="true" aria-modal="true" class="lightbox-galeria" id="lightbox-galeria" role="dialog">
+        <button aria-label="Cerrar imagen" class="cerrar-lightbox" id="cerrar-lightbox" type="button">Cerrar</button>
+    </div>
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+
+        if (parametros.get("from") === "inside") {
+            document.body.classList.add("mostrar-volver");
+        }
+
+        const botonVolverRecorrido = document.getElementById("boton-volver-recorrido");
+        const videoTransicionRegreso = document.getElementById("video-transicion-regreso");
+        const videoRegresoPlayer = document.getElementById("video-regreso-player");
+
+        function volverAlInterior() {
+            sessionStorage.setItem("volverAlInterior", "1");
+            window.location.replace("index.html");
+        }
+
+        if (botonVolverRecorrido) {
+            botonVolverRecorrido.addEventListener("click", function () {
+                if (parametros.get("from") !== "inside") {
+                    window.location.replace("index.html");
+                    return;
+                }
+
+                if (!videoTransicionRegreso || !videoRegresoPlayer) {
+                    volverAlInterior();
+                    return;
+                }
+
+                document.body.classList.add("saliendo-del-recorrido");
+
+                videoRegresoPlayer.pause();
+                videoRegresoPlayer.currentTime = 0;
+
+                videoTransicionRegreso.classList.add("activa");
+                document.body.classList.add("transicion-activa");
+
+                const playPromise = videoRegresoPlayer.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(function () {
+                        volverAlInterior();
+                    });
+                }
+
+                videoRegresoPlayer.onended = function () {
+                    videoRegresoPlayer.onended = null;
+                    volverAlInterior();
+                };
+            });
+        }
+
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function () {
+            menuMovil.classList.toggle("abierto");
+
+            if (menuMovil.classList.contains("abierto")) {
+                botonMenu.textContent = "Cerrar";
+                botonMenu.setAttribute("aria-label", "Cerrar menú");
+                botonMenu.setAttribute("aria-expanded", "true");
+            } else {
+                botonMenu.textContent = "Menú";
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+                botonMenu.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const fotosGaleria = {
+            espacio: {
+                titulo: "Espacios",
+                descripcion: "Entrada y áreas del centro.",
+                fotos: [
+                    ["assets/galeria/espacio/espacio-02.jpg", "Fachada del centro desde la Calle Cristina"],
+                    ["assets/galeria/espacio/espacio-03.jpg", "Patio interior"],
+                    ["assets/galeria/espacio/espacio-04.png", "Fachada principal"],
+                    ["assets/galeria/espacio/espacio-05.jpg", "Vista lateral del edificio histórico"],
+                    ["assets/galeria/espacio/espacio-06.webp", "Fachada del centro desde la calle"],
+                    ["assets/galeria/espacio/espacio-08.png", "Patio interior"],
+                    ["assets/galeria/espacio/espacio-09.jpg", "Galería en patio central"]
+                ]
+            },
+
+            eventos: {
+                titulo: "Eventos",
+                descripcion: "Actividades, presentaciones y talleres.",
+                fotos: [
+                    ["assets/galeria/eventos/evento-01.jpg", "Actividad familiar en sala histórica"],
+                    ["assets/galeria/eventos/evento-02.jpg", "Develación del homenaje a la Bomba y la Plena de Ponce"],
+                    ["assets/galeria/eventos/evento-03.jpg", "Presentación educativa en sala de exhibición"],
+                    ["assets/galeria/eventos/evento-04.jpg", "Participantes de actividad cultural en el patio"],
+                    ["assets/galeria/eventos/evento-05.jpg", "Presentación teatral"],
+                    ["assets/galeria/eventos/evento-06.jpg", "Encuentro musical en el patio del centro"],
+                    ["assets/galeria/eventos/evento-07.jpg", "Encuentro musical en el patio del centro"]
+                ]
+            },
+
+            exhibiciones: {
+                titulo: "Exhibiciones",
+                descripcion: "Obras y montajes expuestos en las salas del centro.",
+                fotos: [
+                    ["assets/galeria/exhibiciones/exhibicion-01.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-02.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-03.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-04.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-05.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-06.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-07.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-08.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-09.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-10.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-11.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-12.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-13.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-14.jpg", ""],
+                    ["assets/galeria/exhibiciones/exhibicion-15.png", "Ponce es Bomba y Plena, obra de Ramón Esteban Rivera Cáliz"]
+                ]
+            },
+
+            anuncios: {
+                titulo: "Anuncios",
+                descripcion: "Avisos de actividades del centro.",
+                fotos: [
+                    ["assets/galeria/anuncios/anuncio-10.jpg", "Conversatorio: Libro biográfico de Don Perignon — 29 de junio de 2026"],
+                    ["assets/galeria/anuncios/anuncio-02.jpg", "Charla-taller: Propiedad intelectual y derechos de autor — 23 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-13.jpg", "Taller de Pelly-Huertos — 23 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-01.jpg", "Sesión de dibujo con modelo vivo — 21 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-07.jpg", "Concierto de Conjunto Añoranza — 16 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-04.jpg", "ESCENAS: Train the Trainers — 14 al 17 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-06.jpg", "Fiesta de Cruz — 11 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-08.jpg", "Exposición: Los tesoros de Trinitaria — 7 de mayo de 2026"],
+                    ["assets/galeria/anuncios/anuncio-03.jpg", "Sesión de dibujo con modelo vivo — 16 de abril de 2026"],
+                    ["assets/galeria/anuncios/anuncio-14.jpg", "Promesa de Reyes — 11 de enero de 2026"],
+                    ["assets/galeria/anuncios/anuncio-11.jpg", "Festival de Ritmos Isleños — 7 de mayo de 2025"],
+                    ["assets/galeria/anuncios/anuncio-12.jpg", "Acto de cierre: Máscaras — 12 de marzo de 2025"],
+                    ["assets/galeria/anuncios/anuncio-05.jpg", "Colectiva: Amig@s del Centro Cultural de Ponce — 16 de noviembre de 2024"],
+                    ["assets/galeria/anuncios/anuncio-09.jpg", "Clases de Danza Puertorriqueña"]
+                ]
+            }
+        };
+
+        const botonesCategoria = document.querySelectorAll(".painting[data-categoria]");
+        const gridFotos = document.getElementById("grid-fotos-seccion");
+        const tituloSeccion = document.getElementById("titulo-seccion");
+        const descripcionSeccion = document.getElementById("descripcion-seccion");
+        const lightboxGaleria = document.getElementById("lightbox-galeria");
+        let lightboxImg = null;
+        const cerrarLightbox = document.getElementById("cerrar-lightbox");
+
+        function mostrarCategoria(categoria) {
+            const data = fotosGaleria[categoria];
+
+            botonesCategoria.forEach(function (boton) {
+                boton.classList.toggle("activo", boton.dataset.categoria === categoria);
+            });
+
+            tituloSeccion.textContent = data.titulo;
+            descripcionSeccion.textContent = data.descripcion;
+            gridFotos.innerHTML = "";
+
+            data.fotos.forEach(function (foto) {
+                const figure = document.createElement("figure");
+                figure.className = "foto-seccion";
+
+                const img = document.createElement("img");
+                img.src = foto[0];
+                img.alt = foto[1] || "Imagen de la galería del Centro Cultural Carmen Solá de Pereira";
+                img.loading = "lazy";
+
+                figure.appendChild(img);
+
+                if (foto[1]) {
+                    const caption = document.createElement("figcaption");
+                    caption.textContent = foto[1];
+                    figure.appendChild(caption);
+                }
+
+                figure.addEventListener("click", function () {
+                    if (!lightboxImg) {
+                        lightboxImg = document.createElement("img");
+                        lightboxImg.id = "lightbox-img";
+                        lightboxGaleria.appendChild(lightboxImg);
+                    }
+
+                    lightboxImg.src = foto[0];
+                    lightboxImg.alt = foto[1] || "Imagen ampliada de la galería del Centro Cultural Carmen Solá de Pereira";
+                    lightboxGaleria.classList.add("activo");
+                    lightboxGaleria.setAttribute("aria-hidden", "false");
+                });
+
+                gridFotos.appendChild(figure);
+            });
+        }
+
+        botonesCategoria.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                mostrarCategoria(boton.dataset.categoria);
+
+                document.querySelector(".galeria-fotos").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+
+        cerrarLightbox.addEventListener("click", function () {
+            lightboxGaleria.classList.remove("activo");
+            lightboxGaleria.setAttribute("aria-hidden", "true");
+
+            if (lightboxImg) {
+                lightboxImg.remove();
+                lightboxImg = null;
+            }
+        });
+
+        lightboxGaleria.addEventListener("click", function (event) {
+            if (event.target === lightboxGaleria) {
+                cerrarLightbox.click();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && lightboxGaleria.classList.contains("activo")) {
+                cerrarLightbox.click();
+            }
+        });
+
+        mostrarCategoria("espacio");
+    </script>
+</body>
+
+</html>
